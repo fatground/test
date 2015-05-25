@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/titlebar_bg_nor" >
+
+        <TextView
+            android:id="@+id/titleText"
+            android:paddingRight="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/header_footer_left_right_padding"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/dish_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        layout="@layout/intent_dish_info" />
+
+    <RadioGroup
+        android:id="@+id/commentsRg"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_weight="0.5"
+        android:background="@drawable/bg_comments_listab"
+        android:layout_below="@id/dish_info"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rbOne"
+            style="@style/comments_btn_style"
+            android:checked="true"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/rb_one_btn_selector"
+            android:text="@string/rbOneComments" />
+        <RadioButton
+            android:id="@+id/rbTwo"
+            style="@style/comments_btn_style"
+            android:paddingLeft="20dp"
+            android:drawableLeft="@drawable/rb_two_btn_selector"
+            android:text="@string/rbTwoComments" />
+    </RadioGroup>   
+    <fragment 
+        android:id="@+id/dish_fragment_comment"
+        android:name="com.fatground.dadabreakfest.IntentDishFragmentComment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/commentsRg"
+        android:layout_marginBottom="50dp"
+        />
+    <fragment 
+        android:id="@+id/dish_fragment_like"
+        android:name="com.fatground.dadabreakfest.IntentDishFragmentLike"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/commentsRg"
+        android:layout_marginBottom="50dp"
+        />
+    <!--
+    <fragment 
+        android:id="@+id/dish_fragment_test"
+        android:name="com.fatground.dadabreakfest.FragmentSetting"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_below="@id/commentsRg"
+        />  -->
+    <include 
+        android:id="@+id/bottombar"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottombar"/> 
+</RelativeLayout>

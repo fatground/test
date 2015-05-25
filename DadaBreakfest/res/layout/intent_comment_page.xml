@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/itemtitle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar_bg_nor" >
+
+        <TextView
+            android:id="@+id/itemtitleText"
+            android:paddingRight="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/header_footer_left_right_padding"
+            android:visibility="visible" />
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_margin="10dp"
+        >
+    <EditText 
+        android:id="@+id/commentstext"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="20dp"
+        android:background="@drawable/weibo_box"
+        android:gravity="top"/>
+    </LinearLayout>
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button 
+            android:id="@+id/confirm_comment"
+            style="@style/intent_bottom_btn_style"
+            android:text="@string/comfirmcomment"/>
+    </LinearLayout>
+
+</LinearLayout>

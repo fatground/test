@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+        <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/titlebar_bg_nor" >
+        <Button 
+            android:id="@+id/refresh"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/setting_refresh"
+            ></Button>
+        
+
+        <TextView
+            android:id="@+id/titleText"
+            android:paddingRight="20dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_weight="1.0"
+            android:text="@string/orders"
+            android:textColor="@color/black"
+            android:textSize="@dimen/header_footer_left_right_padding"
+            android:visibility="visible" />
+        <Button 
+            android:id="@+id/delete"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/action_delete"
+            ></Button>
+    </LinearLayout>
+    <ListView 
+        android:id="@id/android:list"
+       	android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title"
+        android:paddingBottom="1dp"
+        android:dividerHeight="1dp"></ListView>
+    <LinearLayout 
+        android:id="@+id/bottom_bar"
+        android:visibility="invisible"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+    	<Button
+   	        android:id="@+id/bbOne"
+   	        style="@style/intent_bottom_btn_style"
+   	        android:layout_weight="1"
+   	        android:text="@string/bbOne" />
+
+   	    <Button
+   	        android:id="@+id/bbTwo"
+   	        style="@style/intent_bottom_btn_style"
+   	        android:layout_weight="1"
+   	        android:text="@string/bbTwo" />
+
+    </LinearLayout>
+
+</RelativeLayout>

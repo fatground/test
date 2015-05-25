@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" 
+    android:descendantFocusability="afterDescendants"
+    android:orientation="horizontal" >
+        
+    <ImageView
+         android:id="@+id/photograph"
+         android:layout_margin="5dp"
+         android:background="@drawable/weibo_listab_mylist_off"
+         android:layout_width="50dp"
+         android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_toRightOf="@id/photograph"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/username"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+		        android:id="@+id/time"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="@string/time"
+				android:textColor="#CCCCCC"
+				android:textAppearance="?android:attr/textAppearanceSmall"/>
+            <TextView
+		        android:id="@+id/comment"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="comment"
+				android:textColor="#000000"
+				android:maxEms="12"
+				android:singleLine="false"
+				android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+
+</RelativeLayout>
